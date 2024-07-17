@@ -906,14 +906,13 @@ button {
     align-items: flex-start;
     margin-top: 10px;
     width: 100%; /* Butonları kapladığı alanı tam genişlik yapar */
-  }
-  
-  .lang-btn {
-    width: 100%; /* Butonları tam genişlik yapar */
+}
+
+.lang-btn {
+    width: 50%; /* Butonları tam genişlik yapar */
     margin: 5px 0;
     padding: 10px 0;
     border: none;
-    background-color: #007bff;
     color: #fff;
     cursor: pointer;
     font-size: 16px;
@@ -921,14 +920,27 @@ button {
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center; /* Buton içeriğini ortalar */
-  }
-  
-  .lang-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .lang-btn:focus {
+    background-size: cover; /* Arka plan resmini kapla */
+    background-position: center; /* Arka plan resmini ortala */
+}
+
+.lang-btn-en {
+    background-image: url('/images/united-kingdom.png'); /* İngiliz bayrağı resim yolu */
+}
+
+.lang-btn-tr {
+    background-image: url('/images/turkey.png'); /* Türk bayrağı resim yolu */
+}
+
+.lang-btn-sr {
+    background-image: url('/images/serbia.png'); /* Sırp bayrağı resim yolu */
+}
+
+.lang-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lang-btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
-  }
-  
+}

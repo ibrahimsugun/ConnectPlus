@@ -1,15 +1,13 @@
 const translations = {
     en: {
-      title: {
-        home: "Live Support Services",
+      title:  "ConnectPlus Live Support Services",
         about: "About",
         contact: "Contact",
         services: "Services",
         email_support: "Email Support",
         live_chat: "Live Chat Support",
         phone_support: "Phone Support",
-        social_media_support: "Social Media Support"
-      },
+        social_media_support: "Social Media Support",
       keywords: "live support, customer service, 24/7 support",
       description: "A company providing professional 24/7 live support services. We are here to enhance customer satisfaction and strengthen your business reputation.",
       author: "Live Support Team",
@@ -52,16 +50,14 @@ const translations = {
       footer_language: "Language"
     },
     tr: {
-      title: {
-        home: "Canlı Destek Hizmetleri",
+      title: "ConnectPlus",
         about: "Hakkımızda",
         contact: "İletişim",
         services: "Hizmetler",
         email_support: "E-posta Desteği",
         live_chat: "Canlı Sohbet Desteği",
         phone_support: "Telefon Desteği",
-        social_media_support: "Sosyal Medya Desteği"
-      },
+        social_media_support: "Sosyal Medya Desteği",
       keywords: "canlı destek, müşteri hizmetleri, 24/7 destek",
       description: "Profesyonel 24/7 canlı destek hizmetleri sunan bir firma. Müşteri memnuniyetini artırmak ve işletmenizin itibarını güçlendirmek için buradayız.",
       author: "Canlı Destek Ekibi",
@@ -104,16 +100,14 @@ const translations = {
       footer_language: "Language"
     },
     sr: {
-      title: {
-        home: "Usluge Podrške Uživo",
+      title:"Usluge Podrške Uživo",
         about: "O Nama",
         contact: "Kontakt",
         services: "Usluge",
         email_support: "Podrška putem E-pošte",
         live_chat: "Podrška putem Uživo Četa",
         phone_support: "Telefonska Podrška",
-        social_media_support: "Podrška na Društvenim Mrežama"
-      },
+        social_media_support: "Podrška na Društvenim Mrežama",
       keywords: "podrška uživo, korisnička služba, 24/7 podrška",
       description: "Kompanija koja pruža profesionalne usluge podrške uživo 24/7. Tu smo da poboljšamo zadovoljstvo kupaca i ojačamo reputaciju vašeg poslovanja.",
       author: "Tim za Podršku Uživo",
