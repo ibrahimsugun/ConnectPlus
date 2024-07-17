@@ -897,3 +897,38 @@ button {
 .margin_top_90{
   margin-top: 90px;
 }
+
+/* Language Options  */
+
+.language_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    width: 100%; /* Butonları kapladığı alanı tam genişlik yapar */
+  }
+  
+  .lang-btn {
+    width: 100%; /* Butonları tam genişlik yapar */
+    margin: 5px 0;
+    padding: 10px 0;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Buton içeriğini ortalar */
+  }
+  
+  .lang-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .lang-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  

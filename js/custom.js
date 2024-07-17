@@ -369,3 +369,60 @@ $(function () {
 
 
 });
+
+/* Language options */ 
+document.addEventListener('DOMContentLoaded', function () {
+	// Tüm dil değiştirme butonlarını seç
+	const langButtons = document.querySelectorAll('.lang-btn');
+	
+	// Her buton için tıklama olay dinleyicisi ekle
+	langButtons.forEach(button => {
+	  button.addEventListener('click', function () {
+		// Tıklanan butonun dil değerini al
+		const selectedLang = this.getAttribute('data-lang');
+		// Seçilen dili localStorage'a kaydet
+		localStorage.setItem('preferredLang', selectedLang);
+		// Sayfanın dilini güncelle
+		updateLanguage(selectedLang);
+	  });
+	});
+  
+	// Sayfanın dilini güncelleyen fonksiyon
+	function updateLanguage(lang) {
+	  // Başlık metnini güncelle
+	  document.querySelector('title').textContent = translations[lang].title;
+	  // Meta etiketlerini güncelle
+	  document.querySelector('meta[name="keywords"]').setAttribute('content', translations[lang].keywords);
+	  document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].description);
+	  document.querySelector('meta[name="author"]').setAttribute('content', translations[lang].author);
+  
+	  // data-lang attribute'u olan tüm elementlerin metin içeriklerini güncelle
+	  document.querySelectorAll('[data-lang]').forEach(elem => {
+		const key = elem.getAttribute('data-lang');
+		if (translations[lang][key]) {
+		  elem.textContent = translations[lang][key];
+		}
+	  });
+	}
+  
+	// localStorage'da tercih edilen dili kontrol et
+	const preferredLang = localStorage.getItem('preferredLang');
+	if (preferredLang) {
+	  // Tercih edilen dil varsa, sayfayı bu dil ile güncelle
+	  updateLanguage(preferredLang);
+	} else {
+	  // Tercih edilen dil yoksa, tarayıcı dilini kontrol et
+	  const userLang = navigator.language || navigator.userLanguage;
+	  // Tarayıcı dili Türkçe ise 'tr', değilse 'en' olarak ayarla
+	  const lang = userLang.includes('tr') ? 'tr' : 'en';
+	  // Sayfayı tarayıcı dili ile güncelle
+	  updateLanguage(lang);
+	}
+  });
+  
+
+  /* Goback Event*/ 
+  function goBack() {
+	window.history.back();
+}
+
